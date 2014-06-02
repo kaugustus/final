@@ -1,11 +1,5 @@
 <h1>Business Plan Competitions</h1>
 
-<div class="row">
-  <div class="col-md-2 col-md-offset-10">
-    <%= link_to "Add a New Business Plan Competition", "/competitions/new", "class" => 'btn btn-lg btn-primary' %>
-  </div>
-</div>
-
     <% Competition.read.order("name asc").each do |competition| %>
 <li>
 	 <%= link_to competition["name"], "/competitions/#{competition["id"]}" %>
