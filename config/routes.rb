@@ -21,6 +21,23 @@ Final::Application.routes.draw do
 
    # --- Delete
    delete "/competitions/:id" => 'competitions#destroy'
+   
+# Resource: startups
+
+  # --- Create
+  get "/startups/new" => 'startups#new'
+  post "/startups" => 'startups#create'
+
+  # --- Read
+  get "/startups" => 'startups#index'
+  get "/startups/:id" => 'startups#show'
+
+  # -- Update
+  get "/startups/:id/edit" => 'startups#edit'
+  patch "/startups/:id" => 'startups#update'
+
+  # --- Delete
+  delete "/startups/:id" => 'startups#destroy'
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

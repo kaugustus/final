@@ -1,0 +1,6 @@
+    <% Startup.read.order("name asc").each do |startup| %>
+<li>
+	 <%= link_to startup["name"], "/startups/#{startup["id"]}" %>
+	</li>
+	
+	<% end %>

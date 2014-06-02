@@ -7,10 +7,10 @@ Competition:
     - end_date: integer
     - affiliated_school: string
     - description: text
+    - winner_id: integer
 
 Winner:
     - startup_id: integer
-    - competition_id: integer
     - place: integer
 
 Startup:

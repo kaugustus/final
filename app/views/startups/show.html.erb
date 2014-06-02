@@ -1,0 +1,7 @@
+<% startup_id = params["id"] %>
+<% startup = Startup.read(startup_id) %>
+
+<h1><%= startup["name"]%>
+
+<p><strong>About</strong></p>
+<p><%= startup["description"] %></p>

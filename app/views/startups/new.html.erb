@@ -1,0 +1,36 @@
+<div class="page-header">
+  <h1>Add a Startup</h1>
+</div>
+
+<div class="row">
+  <div class="col-md-5">
+
+    <%= form_tag "/startups", "method" => "post"  %>
+
+      <div class="form-group">
+        <%= label_tag "name", "What is the name of your startup?" %>
+        <%= text_field_tag "name", "", "class" => "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= label_tag "founding", "In what year was your startup founded?" %>
+        <%= text_field_tag "founding", "", "class" => "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= label_tag "description", "Add a description" %>
+        <%= text_field_tag "description", "", "class" => "form-control" %>
+      </div>
+
+	  <div class="form-group">
+        <%= label_tag "competition_id", "Did this startup win a business plan competition?" %>
+		<%= select_tag "chosen_competition_id",
+                       options_from_collection_for_select(Competition.read.order("name"),
+                        "id",
+                        "name"), "class" => "form-control" %>
+      </div>
+      <%= submit_tag "Add This Startup", "class" => "btn btn-lg btn-success" %> or <%= link_to "Cancel", "/" %>
+
+    </form>
+</div>
+</div>

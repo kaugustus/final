@@ -1,0 +1,14 @@
+<% competition_id = params["id"] %>
+<% competition = Competition.read(competition_id) %>
+
+<h1><%= competition["name"]%> </h1>
+<h2><%= competition["affiliated_school"] %></h2>
+
+<h3>Kellogg Startup Participants</h3>
+<% winner = Winner.find_by("id" => competition["winner_id"]) %>
+	 <% if winner.present? %>
+<% startup = Startup.find_by("id" => winner["startup_id"])%>
+<li>
+<%= link_to startup["name"], "/startups/#{startup["id"]}"%> 
+	</li>
+	<% end %>
