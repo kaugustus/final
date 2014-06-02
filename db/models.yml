@@ -1,4 +1,35 @@
 # Example table for a typical Book model.
+
+Competition:
+    - name: string
+    - location: string
+    - start_date: integer
+    - end_date: integer
+    - affiliated_school: string
+    - description: text
+
+Winner:
+    - startup_id: integer
+    - competition_id: integer
+    - place: integer
+
+Startup:
+    - name: string
+    - founding: integer
+    - description: text
+    - competition_id: integer
+
+Kellogg_founder:
+    - name: string
+    - grad_year: integer
+    - program: string
+    - startup_id: integer
+
+    
+
+
+    
+
 #
 # Book:
 #   - title: string

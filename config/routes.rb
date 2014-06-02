@@ -1,6 +1,26 @@
 Final::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+  
+  # Specify a custom home page
+   get "/" => "competitions#index"
+
+# Resource: competitions
+   
+   # --- Create
+   get "/competitions/new" => 'competitions#new'
+   post "/competitions" => 'competitions#create'
+
+   # --- Read
+   get "/competitions" => 'competitions#index'
+   get "/competitions/:id" => 'competitions#show'
+
+   # -- Update
+   get "/competitions/:id/edit" => 'competitions#edit'
+   patch "/competitions/:id" => 'competitions#update'
+
+   # --- Delete
+   delete "/competitions/:id" => 'competitions#destroy'
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
