@@ -5,12 +5,17 @@
 
 <h3>About</h3>
 <p><font size="3"><%= startup["description"] %></p>
-
-<h3>Kellogg Founders</h3>		
-<% founder = Kellogg_founder.read(startup_id) %>
+	
+<div>
+<h3>Kellogg Founders</h3>
+    <% founders = Kellogg_founder.where("startup_id" => startup["id"]) %>
+<% founders.each do |founder| %>
 <li>
-<%= founder["name"] %>
+<p><%= founder["name"]%>, <%= founder["program"]%> <%= founder["grad_year"]%></p>	
 </li>
+<% end %>
+</div>
 
 
-<%= link_to "Delete", "/startups/#{startup["id"]}", "method" => "delete" %>
+<p><%= link_to "Delete", "/startups/#{startup["id"]}", "method" => "delete" %></p>
+
