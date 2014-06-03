@@ -2,7 +2,7 @@
 
 <h1>Edit <%= startup["name"] %></h1>
 
-<%= form_tag "/startup#{startup["id"]}", "method" => "patch" %>
+<%= form_tag "/startups#{startup["id"]}", "method" => "patch" %>
 
   <p>
     <%= label_tag "name", "What is the name of your startup?" %>
