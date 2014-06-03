@@ -44,10 +44,10 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem "quiet_assets"
-gem "hirb"
+gem "quiet_assets", group: "development"
+gem "hirb", group: "development"
 gem "ez"
- :test do
+group :development, :test do
   gem "sqlite3"
 end
 
