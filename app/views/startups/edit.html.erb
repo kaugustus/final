@@ -1,0 +1,29 @@
+<% startup = Startup.find_by("id" => params["id"]) %>
+
+<h1>Edit <%= startup["name"] %></h1>
+
+<%= form_tag "/startup#{startup["id"]}", "method" => "patch" %>
+
+  <p>
+    <%= label_tag "name", "What is the name of your startup?" %>
+    <%= text_field_tag "name", startup["name"] %>
+  </p>
+
+  <p>
+    <%= label_tag "founding", "When was your startup founded?" %>
+    <%= text_field_tag "founding", startup["founding"] %>
+  </p>
+  <p>
+    <%= label_tag "description", "Add a description" %>
+    <%= text_field_tag "description", startup["description"] %>
+  </p>
+
+  <p>
+    <%= label_tag "competition_id", "Did your startup win a business plan competition?" %>
+    <%= text_field_tag "chosen_competition_id", startup["competition_id"] %>
+  </p>
+
+  <%= submit_tag %> or <%= link_to "Cancel", "/startups" %>
+
+</form>
+

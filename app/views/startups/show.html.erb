@@ -3,5 +3,7 @@
 
 <h1><%= startup["name"]%>
 
-<p><strong>About</strong></p>
-<p><%= startup["description"] %></p>
+<h3>About</h3>
+<p><font size="3"><%= startup["description"] %></p>
+	
+<%= link_to "Delete", "/startups/#{startup["id"]}", "method" => "delete" %>

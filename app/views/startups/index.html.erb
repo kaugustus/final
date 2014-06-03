@@ -1,6 +1,8 @@
-    <% Startup.read.order("name asc").each do |startup| %>
+<h1>Kellogg Startups</h1>    
+
+<% Startup.read.order("name asc").each do |startup| %>
 <li>
-	 <%= link_to startup["name"], "/startups/#{startup["id"]}" %>
+	 <%= link_to startup["name"], "/startups/#{startup["id"]}" %> <%= link_to "(Edit)", "/startups/#{startup["id"]}/edit" %>
 	</li>
 	
 	<% end %>

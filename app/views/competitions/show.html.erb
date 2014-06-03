@@ -4,11 +4,16 @@
 <h1><%= competition["name"]%> </h1>
 <h2><%= competition["affiliated_school"] %></h2>
 
-<h3>Kellogg Startup Participants</h3>
+<%= competition["description"]%>
+
 <% winner = Winner.find_by("id" => competition["winner_id"]) %>
 	 <% if winner.present? %>
+	
+<h3>Kellogg Startup Participants</h3>
 <% startup = Startup.find_by("id" => winner["startup_id"])%>
 <li>
-<%= link_to startup["name"], "/startups/#{startup["id"]}"%> 
+<%= link_to startup["name"], "/startups/#{startup["id"]}"%>, <% link_to "Edit", "/startups/#{startup["id"]}/edit", "method" => "patch" %>%>
+	
 	</li>
 	<% end %>
+	
