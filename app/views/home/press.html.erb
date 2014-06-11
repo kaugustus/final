@@ -1,0 +1,19 @@
+<div class="container">
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="col-md-5">
+	<% article1 = Press.find_by(:id => 1) %>
+	<% article2 = Press.find_by(:id => 2) %>
+      <h2><%= article1["title"]%></h2>
+	<h3><%= article1["publication"]%> </h3>
+	<img src="<%= article1["photo_url"] %>" alt="some_text">
+      <p><%= article1["description"]%> </p>
+      <p><a class="btn btn-default" href= "<%= article1["article_url"] %>" role="button">Read more &raquo;</a></p>
+    </div>
+    <div class="col-md-5">
+<h2><%= article2["title"]%></h2>
+		<h3><%= article2["publication"] %></h3>
+		<img src="<%= article2["photo_url"] %>" alt="some_text">
+      <p><%= article2["description"]%> </p>
+      <p><a class="btn btn-default" href="<%= article2["article_url"] %>" role="button">Read more &raquo;</a></p>
+    </div>

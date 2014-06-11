@@ -3,7 +3,8 @@ Final::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
   
   # Specify a custom home page
-   get "/" => "home#index"
+   get "/" => 'home#index'
+   get "/press" => 'home#press'
 
 # Resource: competitions
    

@@ -6,14 +6,17 @@
 
 <%= competition["description"]%>
 
-<% winner = Winner.find_by("id" => competition["winner_id"]) %>
-	 <% if winner.present? %>
 	
 <h3>Kellogg Startup Participants</h3>
-<% startup = Startup.find_by("id" => winner["startup_id"])%>
-<li>
-<%= link_to startup["name"], "/startups/#{startup["id"]}"%>, <% link_to "Edit", "/startups/#{startup["id"]}/edit", "method" => "patch" %>%>
-	
-	</li>
-	<% end %>
-	
+<% winner = Winner.where("competition_id" => competition["id"]) %>
+<% if winner.present? %>
+
+<ul>
+  <% winner.each do |winner| %>
+    <% winner = Startup.find_by("id" => winner["startup_id"]) %>
+    <li>
+      <%= winner["name"] %>
+    </li>
+  <% end %>
+</ul>
+  <% end %>

@@ -455,4 +455,15 @@ This course focuses on creating a framework for successful real estate entrepren
 Prerequisites:
 None ")
 
+Press.delete_all
+Press.create(:title => "MBA Startups: Taking The Entrepreneurial Route At Kellogg", :date => "January 4, 2013", :author => "Lawrence Cole", :publication => "Poets and Quants", :image_url => "http://poetsandquants.com/wp-content/uploads/2013/01/JenniferBeall_Kellogg.jpg", :description => "Life often has a way of revealing passions that you never knew you had and taking you places where you never thought you might be. Such was the case for Jennifer Beall, a 2010 graduate of the Kellogg School of Management.
+
+Jennifer completed her undergraduate studies in mathematics at Duke University before working as a management consultant for Marakon in San Francisco, CA. She remained in consulting for two and a half years before attending Kellogg.
+
+Today, Jennifer is Founder and CEO of CleanBeeBaby, LLC, an eco-friendly cleaning service for baby car seats and strollers based in Los Angeles, CA.  A former Kellogg Business Plan Competition winner, Jennifer has perfected her business model and is now raising funds to develop it into a franchise opportunity for other ambitious entrepreneurs. She is also involved in philanthropic initiatives with community organizations such as Baby Buggy and Children’s Hospital of Los Angeles", :article_url => "http://poetsandquants.com/2013/01/04/mba-startups-taking-the-entrepreneurial-route-at-kellogg/")
+Press.create(:title => "Kellogg Wants To Be A Top Three Business School For Startups", :date => "May 29, 2014", :author => "Lauren Everitt", :publication => "Poets and Quants", :image_url => "http://poetsandquants.com/wp-content/uploads/2014/05/Kasey-Lundquist-2014-Alum.jpg", :description => "He’d asked my opinion about a startup idea for comfortable, stylish flats for women pitched by two MBA students in his New Venture Discovery course. I’d explained that I didn’t see a huge market need. There were plenty of options available: My current footwear were comfortable, affordable, and–I liked to think, anyway–stylish. He relayed the pictures back to his students, who emailed me later for my “perspective on comfortable, stylish shoes to inform our shoe design. I was flattered–and surprised.
+
+A few years ago, this conversation wouldn’t have occurred. For starters, Cast, the former CEO of Walmart.com, didn’t teach at Kellogg. For another, his class didn’t exist. In fact, entrepreneurship, as a structured path at Kellogg didn’t really exist. If you possessed any entrepreneurial DNA, you probably decided among Stanford, Berkeley, MIT, Rice, or Babson.
+
+The episode is emblematic of a major shift going on in Evanston, Illinois. Kellogg, long considered a world-class destination for students keen on marketing and consulting, is finally catching the wave of get-out-of-the-classroom entrepreneurship education.", :article_url => "http://poetsandquants.com/2014/05/29/kellogg-wants-to-be-a-top-three-business-school-for-startups/")
 

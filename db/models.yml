@@ -31,6 +31,15 @@ Course:
     - name: string
     - url: string
     - description: text
+    
+Press:
+    - title: string
+    - date: string
+    - author: string
+    - publication: string
+    - image_url: string
+    - description: text
+    - article_url: string
 
 
     
