@@ -11,6 +11,7 @@ Competition:
 
 Winner:
     - startup_id: integer
+    - competition_id: integer
     - place: integer
 
 Startup:
@@ -24,6 +25,13 @@ Kellogg_founder:
     - grad_year: integer
     - program: string
     - startup_id: integer
+    
+Course:
+    - course_number: string
+    - name: string
+    - url: string
+    - description: text
+
 
     
 

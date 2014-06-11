@@ -3,7 +3,7 @@ Final::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
   
   # Specify a custom home page
-   get "/" => "competitions#index"
+   get "/" => "home#index"
 
 # Resource: competitions
    
@@ -38,6 +38,23 @@ Final::Application.routes.draw do
 
   # --- Delete
   delete "/startups/:id" => 'startups#destroy'
+  
+# Resource: startups
+
+  # --- Create
+    get "/courses/new" => 'coursess#new'
+    post "/courses" => 'courses#create'
+
+    # --- Read
+    get "/courses" => 'courses#index'
+    get "/courses/:id" => 'courses#show'
+
+    # -- Update
+    get "/courses/:id/edit" => 'courses#edit'
+    patch "/courses/:id" => 'courses#update'
+
+    # --- Delete
+    delete "/courses/:id" => 'courses#destroy'
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

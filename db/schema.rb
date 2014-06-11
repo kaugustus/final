@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140602185130) do
+ActiveRecord::Schema.define(version: 20140611023707) do
 
   create_table "competitions", force: true do |t|
     t.string  "name"
@@ -19,8 +19,15 @@ ActiveRecord::Schema.define(version: 20140602185130) do
     t.integer "start_date"
     t.integer "end_date"
     t.string  "affiliated_school"
-    t.integer "winner_id"
     t.text    "description"
+    t.integer "winner_id"
+  end
+
+  create_table "courses", force: true do |t|
+    t.string "course_number"
+    t.string "name"
+    t.string "url"
+    t.text   "description"
   end
 
   create_table "kellogg_founders", force: true do |t|
@@ -39,6 +46,7 @@ ActiveRecord::Schema.define(version: 20140602185130) do
 
   create_table "winners", force: true do |t|
     t.integer "startup_id"
+    t.integer "competition_id"
     t.integer "place"
   end
 

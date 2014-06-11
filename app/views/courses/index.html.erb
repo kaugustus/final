@@ -1,0 +1,24 @@
+<h1>KIEI Entrepreneurship Courses at Kellogg</h1>
+
+<p>Kellogg offers the following courses that count toward the entrepreneurship and innovation major.</p>
+
+<div class="container">
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="col-md-4">
+      <h2>Required Courses</h2>
+      <p>The following courses are required for the Entrepreneurship and Innovation major: </p>
+      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+	<p>HLKAHf;KSHF:HSf;</P>
+    </div>
+    <div class="col-md-4">
+      <h2>Elective Courses</h2>
+      <p>In addition to required courses, students must take three of the following electives: </p>
+	<% Course.read.order("name asc").each do |course| %>
+<li>
+	 <%= link_to course["name"], "/courses/#{course["id"]}" %>
+	</li>
+
+	<% end %>
+      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+   </div>
