@@ -1,0 +1,8 @@
+<% course_id = params["id"] %>
+<% course = Course.read(course_id) %>
+
+<h1><%= course["name"]%></h1>
+
+<h3>About</h3>
+
+<p><%= course["description"]%></p>

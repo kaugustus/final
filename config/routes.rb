@@ -5,6 +5,7 @@ Final::Application.routes.draw do
   # Specify a custom home page
    get "/" => 'home#index'
    get "/press" => 'home#press'
+   get "/core" => 'courses#core'
 
 # Resource: competitions
    
